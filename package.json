@@ -6,7 +6,13 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "start": "node dist/server/entry.mjs",
+    "astro": "astro",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint . --ext ts,tsx --fix",
+    "prettier:fix": "prettier . --write",
+    "check:types": "tsc --noEmit",
+    "check": "npm run lint:fix && npm run prettier:fix && npm run check:types"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.0",
