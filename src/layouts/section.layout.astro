@@ -1,0 +1,13 @@
+---
+import clsx from 'clsx'
+
+interface Props {
+  className?: string
+}
+
+const { className } = Astro.props
+---
+
+<section class={clsx('py-10 md:py-20', className)}>
+  <slot />
+</section>
