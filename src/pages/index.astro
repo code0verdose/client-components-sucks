@@ -1,14 +1,14 @@
 ---
-import BaseHead from '../layouts/BaseHead.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts'
+import BaseHead from '../layouts/base-head.layout.astro'
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<h1>Hello, World!</h1>
-	</body>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+  </body>
 </html>
