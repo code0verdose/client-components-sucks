@@ -28,6 +28,8 @@
       "@pages/*": ["src/pages/*"],
       "@layouts": ["src/layouts"],
       "@layouts/*": ["src/layouts/*"],
+      "@components": ["src/components"],
+      "@components/*": ["src/components/*"],
       "@sections": ["src/components/sections"],
       "@sections/*": ["src/components/sections/*"],
       "@ui": ["src/components/ui"],

@@ -51,6 +51,7 @@ export default defineConfig({
       alias: {
         '@pages': path.resolve('src/pages'),
         '@layouts': path.resolve('src/layouts'),
+        '@components': path.resolve('src/components'),
         '@sections': path.resolve('src/components/sections'),
         '@ui': path.resolve('src/components/ui'),
         '@assets': path.resolve('src/assets'),
