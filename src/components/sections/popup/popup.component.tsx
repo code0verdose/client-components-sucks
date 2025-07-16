@@ -20,14 +20,16 @@ export const Popup = () => {
           Примеры модальных окон с использованием различных подходов
         </h2>
         <p className="mt-4 text-lg leading-8 text-gray-600">
-          Выберите интересующий пример и узнайте больше о наших возможностях
+          Для демонстрации используются следующие подходы:
         </p>
       </div>
 
       <div className="max-md:space-y-8 md:flex md:justify-between md:gap-x-10">
         {/* Example 1: Checkbox-based Modal */}
         <div className="flex w-full flex-col items-stretch gap-y-8">
-          <h3 className="text-2xl font-bold text-gray-900">Пример 1: Модальное окно на основе Checkbox</h3>
+          <h3 className="text-2xl font-bold text-gray-900">
+            Пример 1: Модальное окно на основе <span className="text-blue-600">Checkbox</span>
+          </h3>
 
           {/* Trigger button with hidden checkbox */}
           <CheckboxTrigger checkboxId="modal-toggle">Открыть модальное окно (Checkbox)</CheckboxTrigger>
@@ -47,7 +49,9 @@ export const Popup = () => {
 
         {/* Example 2: Popover API Modal */}
         <div className="flex w-full flex-col gap-y-8">
-          <h3 className="text-2xl font-bold text-gray-900">Пример 2: Модальное окно с Popover API</h3>
+          <h3 className="text-2xl font-bold text-gray-900">
+            Пример 2: Модальное окно с <span className="text-purple-600">Popover API</span>
+          </h3>
 
           {/* Trigger button */}
           <PopoverTrigger popoverTarget="popover-modal">Открыть модальное окно (Popover API)</PopoverTrigger>

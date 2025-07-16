@@ -1,10 +1,14 @@
-export interface ApproachData {
+export type TagVariant = 'success' | 'warning' | 'info'
+
+export type ApproachTag = {
+  text: string
+  variant: TagVariant
+}
+
+export type ApproachData = {
   title: string
   description: string
-  tags: Array<{
-    text: string
-    variant: 'success' | 'warning' | 'info'
-  }>
+  tags: Array<ApproachTag>
 }
 
 export const ADDITIONAL_APPROACHES: readonly ApproachData[] = [
@@ -13,9 +17,9 @@ export const ADDITIONAL_APPROACHES: readonly ApproachData[] = [
     description:
       'Нативный HTML элемент <dialog> с методами showModal() и close(). Обеспечивает лучшую доступность и автоматическое управление фокусом, но требует JavaScript для открытия/закрытия.',
     tags: [
-      { text: 'Автоматическая доступность', variant: 'success' as const },
-      { text: 'Управление фокусом', variant: 'success' as const },
-      { text: 'Требует JavaScript', variant: 'warning' as const },
+      { text: 'Автоматическая доступность', variant: 'success' },
+      { text: 'Управление фокусом', variant: 'success' },
+      { text: 'Требует JavaScript', variant: 'warning' },
     ],
   },
 ] as const

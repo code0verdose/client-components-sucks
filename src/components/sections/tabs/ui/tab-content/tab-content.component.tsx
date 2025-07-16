@@ -12,7 +12,7 @@ export const TabContent = (props: TabContentProps) => {
   const { tabs, className = '', ...otherProps } = props
 
   return (
-    <div className={clsx('tab-content relative min-h-[300px]', className)} {...otherProps}>
+    <div className={clsx('tab-content relative', className)} {...otherProps}>
       {tabs.map((tab, index) => (
         <TabItemComponent key={tab.id} tab={tab} index={index} />
       ))}
