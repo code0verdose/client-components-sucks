@@ -12,7 +12,8 @@
     "lint:fix": "eslint . --ext ts,tsx --fix",
     "prettier:fix": "prettier . --write",
     "check:types": "tsc --noEmit",
-    "check": "npm run lint:fix && npm run prettier:fix && npm run check:types"
+    "check": "npm run lint:fix && npm run prettier:fix && npm run check:types",
+    "prepare": "husky"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.0",
@@ -20,19 +21,18 @@
     "@astrojs/react": "^4.3.0",
     "@astrojs/rss": "^4.0.12",
     "@astrojs/sitemap": "^3.4.1",
-    "@astrojs/tailwind": "^6.0.2",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.11",
     "astro": "^5.11.1",
+    "clsx": "^2.1.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "clsx": "^2.1.1",
     "sharp": "^0.34.2",
     "tailwindcss": "^4.1.11"
   },
   "devDependencies": {
-    "@playform/compress": "^0.2.0",
     "@eslint/js": "^9.29.0",
+    "@playform/compress": "^0.2.0",
     "@types/node": "^24.0.3",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
@@ -41,10 +41,21 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.2.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
     "prettier": "3.6.2",
     "prettier-plugin-astro": "0.14.1",
     "prettier-plugin-tailwindcss": "^0.6.12",
     "typescript": "^5.7.2",
     "typescript-eslint": "^8.34.1"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,astro}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ]
   }
 }
