@@ -2,3 +2,28 @@
 
 html {
 }
+
+@layer utilities {
+  .scrollbar-hide {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb:active {
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb:window-inactive {
+      background: transparent;
+    }
+  }
+}
