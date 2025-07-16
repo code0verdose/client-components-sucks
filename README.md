@@ -1,68 +1,185 @@
-# Astro Starter Kit: Blog
+# Client Components Sucks
 
-```sh
-npm create astro@latest -- --template blog
+Пример лендинга, демонстрирующий как можно отказаться от клиентской логики в пользу чистого HTML + CSS, сохраняя при этом SSR/SSG возможности.
+
+## 🎯 Цель проекта
+
+Этот проект показывает, что для создания современных лендингов не обязательно использовать клиентские компоненты и JavaScript. Вместо этого можно использовать:
+
+- **Astro** для SSR/SSG
+- **Чистый HTML + CSS** для интерактивности
+- **CSS-only решения** для сложных UI компонентов
+
+### Ключевые особенности:
+
+- **SSR режим** с Astro + Node.js адаптером
+- **TailwindCSS** для стилизации
+- **TypeScript** для типизации
+- **ESLint + Prettier** для качества кода
+- **MDX** поддержка для контента
+
+## 🚀 Доступные скрипты
+
+### Разработка
+
+```bash
+npm run dev          # Запуск dev сервера на http://localhost:4321
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/blog)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/blog/devcontainer.json)
+### Сборка и продакшн
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![blog](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
-
-Features:
-
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-├── public/
-├── src/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
+```bash
+npm run build        # Сборка проекта для продакшна
+npm run preview      # Предварительный просмотр собранного проекта
+npm run start        # Запуск продакшн сервера
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### Качество кода
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```bash
+npm run lint         # Проверка кода ESLint
+npm run lint:fix     # Автоисправление ESLint ошибок
+npm run prettier:fix # Форматирование кода Prettier
+npm run check:types  # Проверка TypeScript типов
+npm run check        # Полная проверка (lint + prettier + types)
+```
 
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
+### Утилиты
 
-Any static assets, like images, can be placed in the `public/` directory.
+```bash
+npm run astro        # Запуск Astro CLI команд
+```
 
-## 🧞 Commands
+## 🎨 Компоненты
 
-All commands are run from the root of the project, from a terminal:
+### Sections (Секции)
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+- **Accordion** - аккордеон с FAQ данными
+- **Tabs** - табы с различным контентом
+- **Popup** - модальные окна и попапы
+- **Header** - навигация с бургер-меню
 
-## 👀 Want to learn more?
+## 🛠️ Технологии
 
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+### Основные
 
-## Credit
+- **Astro 5.11.1** - фреймворк для статических сайтов
+- **React 19.1.0** - для интерактивных компонентов (опционально)
+- **TypeScript 5.7.2** - типизация
+- **TailwindCSS 4.1.11** - утилитарные CSS классы
 
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+### Интеграции
+
+- **@astrojs/mdx** - поддержка MDX
+- **@astrojs/node** - SSR адаптер
+- **@astrojs/sitemap** - генерация sitemap
+- **@astrojs/rss** - RSS фиды
+- **@playform/compress** - сжатие ресурсов
+
+### Инструменты разработки
+
+- **ESLint** - линтер
+- **Prettier** - форматирование
+- **Sharp** - оптимизация изображений
+
+## 📦 Установка и запуск
+
+1. **Клонирование репозитория**
+
+```bash
+git clone <repository-url>
+cd client-components-sucks
+```
+
+2. **Установка зависимостей**
+
+```bash
+npm install
+```
+
+3. **Запуск в режиме разработки**
+
+```bash
+npm run dev
+```
+
+4. **Открытие в браузере**
+
+```
+http://localhost:4321
+```
+
+## 🌟 Особенности реализации
+
+### CSS-only интерактивность
+
+- Аккордеон работает без JavaScript через CSS `:checked` селекторы
+- Табы переключаются через CSS состояния
+- Модальные окна открываются/закрываются через CSS
+- Бургер-меню анимируется чистыми CSS трансформациями
+
+### Производительность
+
+- **Zero JavaScript** для базовой функциональности
+- **SSR/SSG** для быстрой загрузки
+- **Оптимизированные изображения** через Sharp
+- **Сжатие HTML** для уменьшения размера
+
+### Доступность
+
+- **ARIA атрибуты** для скринридеров
+- **Клавиатурная навигация** (Tab, Enter, Escape)
+- **Семантическая разметка** HTML5
+- **Контрастные цвета** и читаемые шрифты
+
+## 📝 Структура контента
+
+- **Блог** - MDX файлы в `src/content/blog/`
+- **Страницы** - Astro файлы в `src/pages/`
+- **Константы** - данные компонентов в `src/components/sections/*/lib/`
+
+## 🔧 Конфигурация
+
+### Astro (`astro.config.mjs`)
+
+- SSR режим с Node.js адаптером
+- Алиасы путей для удобства импортов
+- Интеграции для MDX, sitemap, React
+- Сжатие HTML и SVG
+
+### TailwindCSS
+
+- Кастомные цвета и шрифты
+- Утилитарные классы
+- Оптимизация для продакшна
+
+### TypeScript
+
+- Строгая типизация
+- Проверка типов при сборке
+- Алиасы путей
+
+## 🚀 Деплой
+
+Проект готов к деплою на любую платформу, поддерживающую Node.js:
+
+- **Vercel** - автоматический деплой
+- **Netlify** - с поддержкой SSR
+- **Railway** - для полноценного SSR
+- **Docker** - через `npm run build` и `npm run start`
+
+## 📄 Лицензия
+
+MIT License
+
+## 🤝 Вклад в проект
+
+1. Форкните репозиторий
+2. Создайте ветку для новой функции
+3. Внесите изменения
+4. Запустите `npm run check`
+5. Создайте Pull Request
+
+---
+
+**Демонстрация того, что современные лендинги можно создавать без избыточного JavaScript, сохраняя при этом отличный UX и производительность.**
