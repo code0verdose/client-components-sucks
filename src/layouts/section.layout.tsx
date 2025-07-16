@@ -10,7 +10,7 @@ const SectionLayout = (props: Props) => {
 
   return (
     <section className={clsx('py-10 md:py-20', className)} {...otherProps}>
-      {children}
+      <div className="container">{children}</div>
     </section>
   )
 }

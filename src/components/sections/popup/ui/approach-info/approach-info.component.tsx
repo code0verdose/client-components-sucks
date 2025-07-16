@@ -23,7 +23,7 @@ export const ApproachInfo = (props: ApproachInfoProps) => {
   const { data, colorScheme, className = '', ...otherProps } = props
 
   return (
-    <div className={clsx('mt-4 rounded-lg p-4', colorScheme.bg, className)} {...otherProps}>
+    <div className={clsx('rounded-lg p-4', colorScheme.bg, className)} {...otherProps}>
       <h4 className={clsx('font-medium', colorScheme.title)}>{data.title}</h4>
       <div className={clsx('mt-2 text-sm', colorScheme.content)}>
         <div className="mb-2">

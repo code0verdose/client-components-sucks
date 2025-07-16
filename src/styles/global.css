@@ -3,6 +3,19 @@
 html {
 }
 
+@layer base {
+  button,
+  label {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto max-w-7xl px-4;
+  }
+}
+
 @layer utilities {
   .scrollbar-hide {
     scrollbar-width: none;

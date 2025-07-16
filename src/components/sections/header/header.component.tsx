@@ -7,7 +7,7 @@ export const Header = () => {
       {/* Hidden checkbox for mobile menu toggle */}
       <input type="checkbox" id="burger-toggle" className="peer hidden" />
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="container">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Logo />

@@ -17,7 +17,7 @@ export const AdditionalApproaches = (props: AdditionalApproachesProps) => {
   const { approaches, className = '', ...otherProps } = props
 
   return (
-    <div className={clsx('mt-12 rounded-lg bg-gray-50 p-6', className)} {...otherProps}>
+    <div className={clsx('rounded-lg bg-gray-50 p-6', className)} {...otherProps}>
       <h3 className="mb-4 text-lg font-semibold text-gray-900">Другие подходы</h3>
       <div className="space-y-4 text-sm text-gray-700">
         {approaches.map((approach, index) => (

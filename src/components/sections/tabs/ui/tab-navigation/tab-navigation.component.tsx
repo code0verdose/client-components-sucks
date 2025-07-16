@@ -22,7 +22,7 @@ export const TabNavigation = (props: TabNavigationProps) => {
         <label
           key={tab.id}
           htmlFor={`tab-${tab.id}`}
-          className="group relative w-full cursor-pointer rounded-t-lg px-4 py-3 text-sm font-medium text-gray-500 transition-all duration-200 hover:bg-gray-50 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          className="group relative flex w-full cursor-pointer items-center justify-center rounded-t-lg px-4 py-3 text-sm font-medium text-gray-500 transition-all duration-200 hover:bg-gray-50 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
         >
           <span className="flex items-center gap-2">
             {tab.icon && <span className="text-lg">{tab.icon}</span>}

@@ -10,7 +10,7 @@ export const ComparisonTable = (props: ComparisonTableProps) => {
   const { className = '', ...otherProps } = props
 
   return (
-    <div className={clsx('mt-8 rounded-lg bg-gray-50 p-6', className)} {...otherProps}>
+    <div className={clsx('rounded-lg bg-gray-50 p-6', className)} {...otherProps}>
       <h3 className="mb-4 text-lg font-semibold text-gray-900">Сравнение подходов</h3>
       <div className="overflow-x-auto">
         <table className="w-full text-sm">
