@@ -1,10 +1,16 @@
-interface BurgerMenuProps {
+import clsx from 'clsx'
+import { type ComponentPropsWithRef } from 'react'
+
+type BurgerMenuProps = ComponentPropsWithRef<'div'> & {
   id: string
+  className?: string
 }
 
-export const BurgerMenu = ({ id }: BurgerMenuProps) => {
+export const BurgerMenu = (props: BurgerMenuProps) => {
+  const { id, className, ...otherProps } = props
+
   return (
-    <div className="md:hidden">
+    <div className={clsx('md:hidden', className)} {...otherProps}>
       <label
         htmlFor={id}
         className="relative inline-flex cursor-pointer items-center justify-center rounded-md p-2 text-gray-700 transition-all duration-200 hover:bg-gray-100 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
